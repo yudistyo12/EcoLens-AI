@@ -1,6 +1,6 @@
 # EcoLens AI
 
-Demo klasifikasi sampah berbasis computer vision untuk mendukung edukasi
+Dashboard klasifikasi sampah berbasis computer vision untuk mendukung edukasi
 pemilahan. Dataset utama adalah Garbage Classification V2 dari Kaggle.
 Proyek ini tidak memetakan lokasi/jam Universitas Teknokrat Indonesia dan tidak
 menghasilkan rekomendasi penempatan fasilitas kampus.
@@ -89,6 +89,6 @@ python -m src.check_submission
 Laporan pemeriksaan tersimpan di `reports\checklist_pengumpulan.json`. Panduan
 deployment tersedia di `docs\DEPLOYMENT.md`. Ringkasan PDF otomatis dibuat di
 `submission\GreenPixel_Universitas Teknokrat Indonesia.pdf`; nama tim, ketua,
-anggota, dan kampus sudah dicantumkan. Naskah demo
+anggota, dan kampus sudah dicantumkan. Naskah video presentasi
 ada di `content\NASKAH_VIDEO.md`. URL dashboard publik, video yang sudah direkam,
 dan surat pernyataan orisinalitas tetap perlu disiapkan/diperiksa oleh tim.
