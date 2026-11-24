@@ -1,0 +1,211 @@
+{
+  "seed": 42,
+  "arsitektur": "MobileNetV2",
+  "bobot_awal": "MobileNet_V2_Weights.IMAGENET1K_V2",
+  "perangkat": "cpu",
+  "model_dilatih_dengan_foto_kampus": false,
+  "jumlah_foto_latih_per_sumber": {
+    "gd_v2": 1260
+  },
+  "riwayat_latih": [
+    {
+      "tahap": 1,
+      "epoch": 1,
+      "loss_latih": 1.2745168398297022,
+      "accuracy_latih": 0.6722222222222223,
+      "validasi": {
+        "loss": 0.9153907555120963,
+        "accuracy": 0.7888888888888889
+      }
+    },
+    {
+      "tahap": 1,
+      "epoch": 2,
+      "loss_latih": 0.7299052719085936,
+      "accuracy_latih": 0.8333333333333334,
+      "validasi": {
+        "loss": 0.6694526120468423,
+        "accuracy": 0.8037037037037037
+      }
+    },
+    {
+      "tahap": 1,
+      "epoch": 3,
+      "loss_latih": 0.5556303923092191,
+      "accuracy_latih": 0.8666666666666667,
+      "validasi": {
+        "loss": 0.5663386468534116,
+        "accuracy": 0.8296296296296296
+      }
+    },
+    {
+      "tahap": 1,
+      "epoch": 4,
+      "loss_latih": 0.4666808670475369,
+      "accuracy_latih": 0.8777777777777778,
+      "validasi": {
+        "loss": 0.5070651122817287,
+        "accuracy": 0.8444444444444444
+      }
+    },
+    {
+      "tahap": 1,
+      "epoch": 5,
+      "loss_latih": 0.4129852072587089,
+      "accuracy_latih": 0.8904761904761904,
+      "validasi": {
+        "loss": 0.46989675848572343,
+        "accuracy": 0.8518518518518519
+      }
+    },
+    {
+      "tahap": 2,
+      "epoch": 1,
+      "loss_latih": 0.39107652032186113,
+      "accuracy_latih": 0.876984126984127,
+      "validasi": {
+        "loss": 0.39566962994911054,
+        "accuracy": 0.8703703703703703
+      }
+    },
+    {
+      "tahap": 2,
+      "epoch": 2,
+      "loss_latih": 0.2741021583004603,
+      "accuracy_latih": 0.9246031746031746,
+      "validasi": {
+        "loss": 0.3573949733266124,
+        "accuracy": 0.8666666666666667
+      }
+    },
+    {
+      "tahap": 2,
+      "epoch": 3,
+      "loss_latih": 0.22219483445561122,
+      "accuracy_latih": 0.9428571428571428,
+      "validasi": {
+        "loss": 0.3397742274734709,
+        "accuracy": 0.8777777777777778
+      }
+    },
+    {
+      "tahap": 2,
+      "epoch": 4,
+      "loss_latih": 0.16834113919545735,
+      "accuracy_latih": 0.9555555555555556,
+      "validasi": {
+        "loss": 0.31843453524289306,
+        "accuracy": 0.8888888888888888
+      }
+    },
+    {
+      "tahap": 2,
+      "epoch": 5,
+      "loss_latih": 0.14146523329000624,
+      "accuracy_latih": 0.9666666666666667,
+      "validasi": {
+        "loss": 0.31279596399377896,
+        "accuracy": 0.8962962962962963
+      }
+    }
+  ],
+  "evaluasi_dataset_publik": {
+    "jumlah_foto_uji": 270,
+    "accuracy": 0.9,
+    "per_kelas": {
+      "plastik": {
+        "precision": 0.8947368421052632,
+        "recall": 0.7555555555555555,
+        "f1": 0.8192771084337349,
+        "support": 45
+      },
+      "kertas_kardus": {
+        "precision": 0.8958333333333334,
+        "recall": 0.9555555555555556,
+        "f1": 0.9247311827956989,
+        "support": 45
+      },
+      "logam": {
+        "precision": 0.8235294117647058,
+        "recall": 0.9333333333333333,
+        "f1": 0.875,
+        "support": 45
+      },
+      "kaca": {
+        "precision": 0.9512195121951219,
+        "recall": 0.8666666666666667,
+        "f1": 0.9069767441860465,
+        "support": 45
+      },
+      "organik": {
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1": 0.9887640449438202,
+        "support": 45
+      },
+      "residu": {
+        "precision": 0.8541666666666666,
+        "recall": 0.9111111111111111,
+        "f1": 0.8817204301075269,
+        "support": 45
+      }
+    },
+    "macro_avg": {
+      "precision": 0.9032476276775152,
+      "recall": 0.9,
+      "f1": 0.8994115850778046
+    },
+    "confusion_matrix": [
+      [
+        34,
+        2,
+        4,
+        1,
+        0,
+        4
+      ],
+      [
+        0,
+        43,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        42,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        4,
+        39,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        44,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        0,
+        0,
+        41
+      ]
+    ]
+  },
+  "evaluasi_foto_latih_kampus": null,
+  "catatan": "Evaluasi publik dan kampus dipisahkan. Foto kampus tanpa label manual tidak digunakan untuk metrik kampus."
+}

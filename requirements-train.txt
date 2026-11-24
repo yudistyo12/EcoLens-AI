@@ -1,0 +1,10 @@
+torch
+torchvision
+scikit-learn
+matplotlib
+pillow
+huggingface_hub
+pytest
+onnx>=1.16,<1.17
+onnxruntime
+reportlab>=4.0,<5

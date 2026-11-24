@@ -1,0 +1,71 @@
+{
+  "status": "BELUM SIAP",
+  "ruang_lingkup": "Demo klasifikasi sampah menggunakan dataset publik Kaggle",
+  "pemeriksaan": [
+    {
+      "pemeriksaan": "Kode dan dokumentasi",
+      "status": "LULUS",
+      "rincian": "Kode, sumber data, deployment, AI disclosure, dan template tersedia."
+    },
+    {
+      "pemeriksaan": "File contoh terisolasi",
+      "status": "LULUS",
+      "rincian": "File contoh berlabel sintetik dan tidak menjadi sumber insight dashboard."
+    },
+    {
+      "pemeriksaan": "Manifest Kaggle",
+      "status": "LULUS",
+      "rincian": "1800 foto; train=1260, val=270, test=270; semua path valid dan grup tidak bocor antar-split."
+    },
+    {
+      "pemeriksaan": "Dataset Kaggle lokal",
+      "status": "LULUS",
+      "rincian": "Folder standardized_256 tersedia."
+    },
+    {
+      "pemeriksaan": "Evaluasi model",
+      "status": "LULUS",
+      "rincian": "Seluruh split manifest tercakup; accuracy uji publik 90.0%, macro F1 89.9%."
+    },
+    {
+      "pemeriksaan": "Model ONNX",
+      "status": "LULUS",
+      "rincian": "Model inferensi ONNX berhasil divalidasi."
+    },
+    {
+      "pemeriksaan": "Insight dan kandidat rekomendasi",
+      "status": "LULUS",
+      "rincian": "3 insight terhitung dan 2 kandidat berbasis metrik publik; tim tetap menulis rekomendasi final."
+    },
+    {
+      "pemeriksaan": "Dashboard lokal",
+      "status": "LULUS",
+      "rincian": "Visualisasi interaktif dan demo inferensi foto tersedia."
+    },
+    {
+      "pemeriksaan": "Tautan dashboard publik tanpa login",
+      "status": "PERLU_TIM",
+      "rincian": "Tim harus menyiapkan dan memverifikasi deliverable ini."
+    },
+    {
+      "pemeriksaan": "Ringkasan proyek PDF maksimal tiga halaman",
+      "status": "PERLU_TIM",
+      "rincian": "PDF tersedia; tim harus melengkapi placeholder nama dan memastikan dokumen maksimal tiga halaman."
+    },
+    {
+      "pemeriksaan": "Tautan video demo",
+      "status": "PERLU_TIM",
+      "rincian": "Tim harus menyiapkan dan memverifikasi deliverable ini."
+    },
+    {
+      "pemeriksaan": "Surat pernyataan orisinalitas bertanda tangan",
+      "status": "PERLU_TIM",
+      "rincian": "Tim harus menyiapkan dan memverifikasi deliverable ini."
+    },
+    {
+      "pemeriksaan": "Rekomendasi final",
+      "status": "PERLU_TIM",
+      "rincian": "Tinjau kandidat berbasis metrik lalu tulis rekomendasi final tim."
+    }
+  ]
+}

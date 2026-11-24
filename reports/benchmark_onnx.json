@@ -1,0 +1,15 @@
+{
+  "format": "ecolens_onnx_benchmark_v1",
+  "waktu_pengukuran": "2026-11-25T00:48:10+07:00",
+  "provider": "CPUExecutionProvider",
+  "prosesor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "jumlah_foto_uji": 270,
+  "jumlah_foto_pemanasan": 10,
+  "rata_rata_ms": 5.462158147996956,
+  "median_ms": 5.024550002417527,
+  "p95_ms": 8.081934997244387,
+  "cakupan_waktu": "Hanya sesi inferensi ONNX; dekode, resize, dan normalisasi gambar tidak dihitung.",
+  "model_bytes": 8899023,
+  "model_sha256": "7af15d30501359fd415ba2f161a94b78b4266ff65b71217597e7ea703d3423e2",
+  "manifest_sha256": "8a4190f2d7fb7fbce150638c46efb76747614d7127ce6d45ae595e6f0404390b"
+}

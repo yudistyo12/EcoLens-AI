@@ -1,0 +1,200 @@
+{
+  "sumber": {
+    "nama": "Garbage Classification V2",
+    "url": "https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2",
+    "lisensi": "MIT (sesuai keterangan sumber dataset)",
+    "folder_lokal": "dataset/standardized_256",
+    "peran": "Pelatihan dan evaluasi model; bukan data lokasi kampus."
+  },
+  "dataset_asal": {
+    "jumlah_foto_per_folder": {
+      "battery": 756,
+      "biological": 699,
+      "cardboard": 1411,
+      "clothes": 1892,
+      "glass": 1736,
+      "metal": 930,
+      "paper": 1336,
+      "plastic": 1597,
+      "shoes": 1449,
+      "trash": 453
+    },
+    "jumlah_foto_total": 12259,
+    "pemetaan_per_folder": {
+      "battery": "diabaikan",
+      "biological": "organik",
+      "cardboard": "kertas_kardus",
+      "clothes": "diabaikan",
+      "glass": "kaca",
+      "metal": "logam",
+      "paper": "kertas_kardus",
+      "plastic": "plastik",
+      "shoes": "diabaikan",
+      "trash": "residu"
+    },
+    "jumlah_per_kelas_setelah_pemetaan": {
+      "plastik": 1597,
+      "kertas_kardus": 2747,
+      "logam": 930,
+      "kaca": 1736,
+      "organik": 699,
+      "residu": 453
+    },
+    "kelas_diabaikan": [
+      "battery",
+      "clothes",
+      "shoes"
+    ]
+  },
+  "manifest_sampel_model": {
+    "jumlah_foto": 1800,
+    "jumlah_per_kelas_dan_split": {
+      "plastik": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      },
+      "kertas_kardus": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      },
+      "logam": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      },
+      "kaca": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      },
+      "organik": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      },
+      "residu": {
+        "train": 210,
+        "val": 45,
+        "test": 45
+      }
+    },
+    "catatan": "Manifest dibatasi/sampling untuk pelatihan; jumlahnya bukan prevalensi sampah di lingkungan nyata."
+  },
+  "evaluasi_model_publik": {
+    "jumlah_foto_uji": 270,
+    "accuracy": 0.9,
+    "per_kelas": {
+      "plastik": {
+        "precision": 0.8947368421052632,
+        "recall": 0.7555555555555555,
+        "f1": 0.8192771084337349,
+        "support": 45
+      },
+      "kertas_kardus": {
+        "precision": 0.8958333333333334,
+        "recall": 0.9555555555555556,
+        "f1": 0.9247311827956989,
+        "support": 45
+      },
+      "logam": {
+        "precision": 0.8235294117647058,
+        "recall": 0.9333333333333333,
+        "f1": 0.875,
+        "support": 45
+      },
+      "kaca": {
+        "precision": 0.9512195121951219,
+        "recall": 0.8666666666666667,
+        "f1": 0.9069767441860465,
+        "support": 45
+      },
+      "organik": {
+        "precision": 1.0,
+        "recall": 0.9777777777777777,
+        "f1": 0.9887640449438202,
+        "support": 45
+      },
+      "residu": {
+        "precision": 0.8541666666666666,
+        "recall": 0.9111111111111111,
+        "f1": 0.8817204301075269,
+        "support": 45
+      }
+    },
+    "macro_avg": {
+      "precision": 0.9032476276775152,
+      "recall": 0.9,
+      "f1": 0.8994115850778046
+    },
+    "confusion_matrix": [
+      [
+        34,
+        2,
+        4,
+        1,
+        0,
+        4
+      ],
+      [
+        0,
+        43,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        42,
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        4,
+        39,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        44,
+        1
+      ],
+      [
+        1,
+        2,
+        1,
+        0,
+        0,
+        41
+      ]
+    ]
+  },
+  "insight_terhitung": [
+    "Pada 270 foto uji, accuracy model 90.0% dan macro F1 89.9%.",
+    "Recall terendah terdapat pada kelas plastik (75.6%).",
+    "Pasangan salah-klasifikasi terbanyak: label kaca diprediksi logam (4 foto uji)."
+  ],
+  "kandidat_rekomendasi": [
+    {
+      "judul": "Tinjau kelas dengan recall terendah",
+      "dasar": "Recall terendah terdapat pada kelas plastik (75.6%).",
+      "usulan_kandidat": "Periksa contoh salah-klasifikasi kelas tersebut dan uji perbaikan data/pelatihan sebelum menetapkan solusi."
+    },
+    {
+      "judul": "Tinjau pasangan kelas yang paling sering tertukar",
+      "dasar": "Pasangan salah-klasifikasi terbanyak: label kaca diprediksi logam (4 foto uji).",
+      "usulan_kandidat": "Tinjau kemiripan visual dan panduan label pasangan kelas ini, lalu bandingkan metrik setelah perbaikan."
+    }
+  ],
+  "batasan": "Hasil hanya menjelaskan performa pada dataset publik dan tidak menunjukkan pola lokasi, waktu, atau akurasi di kampus."
+}

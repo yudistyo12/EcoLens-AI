@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+plotly
+scipy
+pillow
+onnxruntime
+opencv-python-headless>=4.10,<5; platform_system != "Windows"
+opencv-python>=4.10,<5; platform_system == "Windows"
