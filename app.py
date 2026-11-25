@@ -64,6 +64,10 @@ GAYA = """
         max-width: 1360px;
         padding: 2.25rem 3.1rem 3.5rem;
     }
+    [data-testid="stMain"] [data-testid="stColumn"],
+    [data-testid="stMarkdownContainer"] {
+        min-width: 0;
+    }
     h1, h2, h3 {
         color: var(--eco-ink);
         letter-spacing: -0.035em;
@@ -140,6 +144,8 @@ GAYA = """
         border-radius: 1rem;
         padding: 0.4rem;
         box-shadow: 0 4px 16px rgba(29, 43, 36, 0.025);
+        max-width: 100%;
+        overflow-x: auto;
     }
     [data-testid="stAlert"] {
         border-radius: 0.85rem;
@@ -210,7 +216,7 @@ GAYA = """
         margin: 0.55rem 0 0.25rem;
     }
     .eco-insight {
-        height: 100%;
+        height: auto;
         min-height: 132px;
         background: white;
         border: 1px solid var(--eco-line);
@@ -265,16 +271,56 @@ GAYA = """
         margin-top: 2.5rem;
         padding-top: 1rem;
     }
+    @media (max-width: 1100px) {
+        [data-testid="stMain"] .block-container {
+            padding: 1.75rem 1.5rem 3rem;
+        }
+        [data-testid="stHorizontalBlock"] {
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+            flex: 1 1 18rem !important;
+            width: auto !important;
+            min-width: min(100%, 18rem) !important;
+        }
+    }
     @media (max-width: 800px) {
         [data-testid="stMain"] .block-container {
-            padding: 1.5rem 1.1rem 2.5rem;
+            padding: 1.25rem 1rem 2.25rem;
         }
         h1 {
-            font-size: 2.1rem !important;
+            font-size: clamp(1.8rem, 8vw, 2.1rem) !important;
+        }
+        h2 {
+            font-size: 1.4rem !important;
         }
         .eco-brandline {
             flex-wrap: wrap;
             letter-spacing: 0.07em;
+        }
+        [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+            flex-basis: 100% !important;
+            width: 100% !important;
+            min-width: 100% !important;
+        }
+        [data-testid="stSidebar"] [role="radiogroup"] label {
+            padding: 0.65rem 0.72rem;
+        }
+        .eco-insight {
+            min-height: 0;
+        }
+        .eco-result-value {
+            font-size: 1.65rem;
+            overflow-wrap: anywhere;
+        }
+        [data-testid="stImage"] img {
+            max-width: 100%;
+            height: auto;
+        }
+        div.stButton > button,
+        div.stDownloadButton > button {
+            width: 100%;
         }
     }
 </style>
